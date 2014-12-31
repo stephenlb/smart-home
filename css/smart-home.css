@@ -1,0 +1,248 @@
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Background Setup */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+body {
+    background-color: #1c2831;
+    background-image: url(../media/bg.png);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 0px 0px; 
+    overflow: hidden;
+}
+body, div, i, span, li {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.relative {
+    position: relative;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Header Area */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.pubnub {
+    position: absolute;
+    top: -12px;
+    left: 128px;
+    width: 80px;
+    height: 25px;
+    opacity: 0.9;
+    background-image: url(../media/pubnub.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.header-area {
+    height: 100px;
+}
+.smart-home {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: #bbe4fd;
+}
+.smart-home img {
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Octo GUI */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.octo-indicator {
+    position: absolute;
+    left: 67px;
+    bottom: 34px;
+    width: 66px;
+    height: 4px;
+}
+
+/* OFF */
+.octo-off i.fa { color: #f45245 }
+.octo-off div.relative div.octo-indicator {
+    background: rgba(120,120,140,0.1);
+}
+
+/* ON */
+.octo-on i.leds { color: #19b4dc }
+.octo-on i.door { color: #f45245 }
+.octo-on i.conf { color: #b36ddc }
+.octo-on div.relative div.octo-indicator {
+    box-shadow:
+        0px 0px 40px #64cb93,
+        0px 0px 10px #64cb93;
+    background: #64cb93;
+}
+
+.octo-hitbox {
+    cursor: pointer;
+    position: absolute;
+    width: 100px;
+    height: 128px;
+    /*background: rgba(255,0,0,0.5);*/
+}
+#octo-leds {
+    top: 26px;
+    left: 50px;
+}
+#octo-door {
+    top: 91px;
+    left: 163px;
+}
+#octo-conf {
+    top: 156px;
+    left: 50px;
+}
+.octo {
+    position: absolute;
+
+    background-image: url(../media/octo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    width: 200px;
+    height: 200px;
+
+    text-align: center;
+    font-size: 50px;
+    line-height: 180px;
+}
+.octo-leds {
+    top: 0px;
+    left: 0px;
+}
+.octo-door {
+    top: 65px;
+    left: 113px;
+}
+.octo-conf {
+    top: 130px;
+    left: 0px;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Octo Animation */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+#octo-group,
+.octo {
+    -webkit-transition: all 0.9s;
+}
+.octo-labels,
+.tempurature {
+    -webkit-transition: all 3.0s;
+}
+.octo-off-screen {
+    -webkit-transform: rotate(-180deg);
+    -webkit-transform-origin: 400px 110px;
+}
+.octo-off-screen .octo {
+    -webkit-transform: rotate(180deg);
+}
+.octo-off-screen .tempurature,
+.octo-off-screen .octo-labels {
+    opacity: 0;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Octo Labels */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.octo-labels {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.octo-labels .octo-leds {
+    position: absolute;
+    top: -4px;
+    left: 156px;
+    width: 155px;
+    height: 1px;
+    background-color: #19b4dc;
+}
+.octo-labels .octo-leds-ang {
+    position: absolute;
+    top: 11px;
+    left: 130px;
+    width: 32px;
+    height: 1px;
+    background-color: #19b4dc;
+    -webkit-transform: rotate(-60deg);
+}
+.octo-labels .octo-leds-title {
+    position: absolute;
+    top: -24px;
+    left: 264px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 200;
+}
+
+.octo-labels .octo-door {
+    position: absolute;
+    top: 156px;
+    left: 290px;
+    width: 105px;
+    height: 1px;
+    background-color: #f45245;
+}
+.octo-labels .octo-door-title {
+    position: absolute;
+    top: 136px;
+    left: 354px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 200;
+}
+
+.octo-labels .octo-conf {
+    position: absolute;
+    top: 317px;
+    left: -111px;
+    width: 155px;
+    height: 1px;
+    background-color: #b36ddc;
+}
+.octo-labels .octo-conf-ang {
+    position: absolute;
+    top: 302px;
+    left: 38px;
+    width: 32px;
+    height: 1px;
+    background-color: #b36ddc;
+    -webkit-transform: rotate(-60deg);
+}
+.octo-labels .octo-conf-title {
+    position: absolute;
+    top: 297px;
+    left: -111px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 200;
+}
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Tempurature */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.tempurature-deg {
+    position: relative;
+    top: -27px;
+    font-size: 140px;
+    line-height: 100px;
+    font-weight: 100;
+    vertical-align: middle; 
+}
+.tempurature {
+    position: absolute;
+    top: -50px;
+    left: 140px;
+    font-size: 170px;
+    letter-spacing: -6px;
+    line-height: 170px;
+    color: rgba(255,255,255,0.1);
+    font-weight: 400;
+}
