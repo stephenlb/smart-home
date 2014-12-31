@@ -71,14 +71,26 @@ body, div, i, span, li {
 }
 
 /* ON */
-.octo-on i.leds { color: #19b4dc }
-.octo-on i.door { color: #f45245 }
-.octo-on i.conf { color: #b36ddc }
-.octo-on div.relative div.octo-indicator {
+.octo-on i.leds { color: #64cb93 }
+.octo-on div.octo-indicator.leds {
     box-shadow:
         0px 0px 40px #64cb93,
         0px 0px 10px #64cb93;
     background: #64cb93;
+}
+.octo-on i.door { color: #f45245 }
+.octo-on div.octo-indicator.door {
+    box-shadow:
+        0px 0px 40px #f45245,
+        0px 0px 10px #f45245;
+    background: #f45245;
+}
+.octo-on i.conf { color: #b36ddc }
+.octo-on div.octo-indicator.conf {
+    box-shadow:
+        0px 0px 40px #b36ddc,
+        0px 0px 10px #b36ddc;
+    background: #b36ddc;
 }
 
 .octo-hitbox {
@@ -144,6 +156,7 @@ body, div, i, span, li {
 div#octo-group.octo-off-screen {
     -webkit-transform: rotate(-180deg);
     -webkit-transform-origin: 400px 110px;
+    opacity: 0.9;
 }
 .octo-off-screen .octo {
     -webkit-transform: rotate(180deg);
@@ -168,7 +181,7 @@ div#octo-group.octo-off-screen {
     left: 156px;
     width: 155px;
     height: 2px;
-    background-color: #19b4dc;
+    background-color: #64cb93;
 }
 .octo-labels .octo-leds-ang {
     position: absolute;
@@ -176,7 +189,7 @@ div#octo-group.octo-off-screen {
     left: 130px;
     width: 32px;
     height: 2px;
-    background-color: #19b4dc;
+    background-color: #64cb93;
     -webkit-transform: rotate(-60deg);
 }
 .octo-labels .octo-leds-title {

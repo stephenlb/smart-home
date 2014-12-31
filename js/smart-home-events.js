@@ -41,6 +41,16 @@ function hide_menu(event) {
 
     play('click-beep-sound');
 
+    if (hide_menu.invisible) {
+        hide_menu.invisible = false;
+        setTimeout( function(){ PUBNUB.events.fire('show-menu') }, 300 );
+        return;
+    }
+    else {
+        hide_menu.invisible = true;
+        setTimeout( function(){ PUBNUB.events.fire('hide-menu') }, 300 );
+    }
+
     animate( PUBNUB.$("octo-"+event.data+"-indicator"), [
         { 'd' : 0.2, 'r' : 10, 'opacity' : '0.5' },
         { 'd' : 0.2 }
@@ -51,7 +61,6 @@ function hide_menu(event) {
         { 'd' : 0.8 }
     ] );
 
-    setTimeout( function(){ PUBNUB.events.fire('hide-menu') }, 300 );
 }
 
 
