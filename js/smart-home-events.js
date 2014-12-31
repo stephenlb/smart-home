@@ -2,8 +2,15 @@
 // Show LEDs Menu
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.events.bind( 'menu.leds', function(event) {
-    console.log('LEDs');
+    console.log('LEDs',event);
+
     play('click-beep-sound');
+
+    animate( PUBNUB.$("octo-"+event.data+"-indicator"), [
+        { 'd' : 0.2, 'r' : 10, 'opacity' : '1' },
+        { 'd' : 0.2, 'r' :  0, 'opacity' : '0' }
+    ] );
+
     setTimeout( function(){ PUBNUB.events.fire('hide-menu') }, 300 );
 } );
 
