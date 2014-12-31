@@ -88,15 +88,15 @@ body, div, i, span, li {
     height: 128px;
     /*background: rgba(255,0,0,0.5);*/
 }
-#octo-leds {
+#octo-leds-hitbox {
     top: 26px;
     left: 50px;
 }
-#octo-door {
+#octo-door-hitbox {
     top: 91px;
     left: 163px;
 }
-#octo-conf {
+#octo-conf-hitbox {
     top: 156px;
     left: 50px;
 }

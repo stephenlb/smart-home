@@ -92,7 +92,7 @@
                     <!-- Octo Hexigon Buttons -->
                     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
                     <div class="relative">
-                        <div class="octo octo-leds octo-on">
+                        <div id="octo-leds" class="octo octo-leds octo-on">
                             <i class="fa fa-lightbulb-o leds"></i>
                             <div class="relative">
                                 <div class="octo-indicator"></div>
@@ -103,7 +103,7 @@
                             class="octo octo-leds octo-hidden"
                         ></div>
 
-                        <div class="octo octo-door octo-on">
+                        <div id="octo-door" class="octo octo-door octo-on">
                             <i class="fa fa-unlock-alt door"></i>
                             <div class="relative">
                                 <div class="octo-indicator"></div>
@@ -114,7 +114,7 @@
                             class="octo octo-door octo-hidden"
                         ></div>
 
-                        <div class="octo octo-conf octo-on">
+                        <div id="octo-conf" class="octo octo-conf octo-on">
                             <i class="fa fa-cogs conf"></i>
                             <div class="relative">
                                 <div class="octo-indicator"></div>
@@ -132,19 +132,19 @@
                     <div class="relative">
                             
                         <div
-                            id="octo-leds"
+                            id="octo-leds-hitbox"
                             data-data="leds"
                             data-action="leds"
                             class="octo-hitbox"
                         ></div>
                         <div
-                            id="octo-door"
+                            id="octo-door-hitbox"
                             data-data="door"
                             data-action="door"
                             class="octo-hitbox"
                         ></div>
                         <div
-                            id="octo-conf"
+                            id="octo-conf-hitbox"
                             data-data="conf"
                             data-action="conf"
                             class="octo-hitbox"
