@@ -86,7 +86,7 @@ body, div, i, span, li {
     position: absolute;
     width: 100px;
     height: 128px;
-    /*background: rgba(255,0,0,0.5);*/
+    background: rgba(255,0,0,0.5);
 }
 #octo-leds {
     top: 26px;
@@ -114,6 +114,9 @@ body, div, i, span, li {
     font-size: 50px;
     line-height: 180px;
 }
+.octo-hidden {
+    opacity: 0;
+}
 .octo-leds {
     top: 0px;
     left: 0px;
@@ -136,9 +139,9 @@ body, div, i, span, li {
 }
 .octo-labels,
 .tempurature {
-    -webkit-transition: all 3.0s;
+    -webkit-transition: all 1.0s;
 }
-.octo-off-screen {
+div#octo-group.octo-off-screen {
     -webkit-transform: rotate(-180deg);
     -webkit-transform-origin: 400px 110px;
 }
@@ -147,6 +150,7 @@ body, div, i, span, li {
 }
 .octo-off-screen .tempurature,
 .octo-off-screen .octo-labels {
+    -webkit-transform: rotate(4deg);
     opacity: 0;
 }
 
