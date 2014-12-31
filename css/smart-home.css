@@ -24,7 +24,7 @@ body, div, i, span, li {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .pubnub {
     position: absolute;
-    top: -12px;
+    top: 45px;
     left: 128px;
     width: 80px;
     height: 25px;
@@ -163,7 +163,7 @@ body, div, i, span, li {
     top: -4px;
     left: 156px;
     width: 155px;
-    height: 1px;
+    height: 2px;
     background-color: #19b4dc;
 }
 .octo-labels .octo-leds-ang {
@@ -171,7 +171,7 @@ body, div, i, span, li {
     top: 11px;
     left: 130px;
     width: 32px;
-    height: 1px;
+    height: 2px;
     background-color: #19b4dc;
     -webkit-transform: rotate(-60deg);
 }
@@ -188,7 +188,7 @@ body, div, i, span, li {
     top: 156px;
     left: 290px;
     width: 105px;
-    height: 1px;
+    height: 2px;
     background-color: #f45245;
 }
 .octo-labels .octo-door-title {
@@ -204,7 +204,7 @@ body, div, i, span, li {
     top: 317px;
     left: -111px;
     width: 155px;
-    height: 1px;
+    height: 2px;
     background-color: #b36ddc;
 }
 .octo-labels .octo-conf-ang {
@@ -212,7 +212,7 @@ body, div, i, span, li {
     top: 302px;
     left: 38px;
     width: 32px;
-    height: 1px;
+    height: 2px;
     background-color: #b36ddc;
     -webkit-transform: rotate(-60deg);
 }
