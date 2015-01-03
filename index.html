@@ -24,7 +24,7 @@
             <div class="relative">
                 <div class="smart-home">
                     <img src="media/lego.png">
-                    SMART HOME v0.19
+                    SMART HOME v0.21
                 </div>
                 <div class="pubnub"></div>
             </div>
@@ -84,7 +84,7 @@
                         <div data-action="light-select" data-value="6"
                             class="light-select light-unselected">6</div>
 
-                    </div><div class="col-xs-6">
+                    </div><div class="col-xs-1">
 
                         <!-- MIN PULSE -->
                         <input
@@ -93,6 +93,8 @@
                             id="min-pulse" type="range" class="vertical-light"
                             min="10" max="4090" step="10" value="2500">
 
+                    </div><div class="col-xs-1">
+
                         <!-- MAX PULSE -->
                         <input
                             data-action="light-slider"
@@ -100,12 +102,16 @@
                             id="max-pulse" type="range" class="vertical-light"
                             min="10" max="4090" step="10" value="3000">
 
+                    </div><div class="col-xs-1">
+
                         <!-- MIN WAIT -->
                         <input
                             data-action="light-slider"
                             data-value="waitCeiling"
                             id="min-wait" type="range" class="vertical-light"
                             min="0.0" max="2.0" step="0.0001" value="0.0001">
+
+                    </div><div class="col-xs-1">
 
                         <!-- MAX WAIT -->
                         <input

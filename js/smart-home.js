@@ -53,6 +53,8 @@ function delegate( element, namespace ) {
             data   : data.result
         } );
     } );
+
+    return true;
 }
 
 function bubblefind( e, attr ) {
