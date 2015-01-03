@@ -3,7 +3,7 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 var led_id = 0;
 PUBNUB.events.bind( 'click.leds', function(event) {
-    console.log('LEDs');
+    PUBNUB.log('LEDs');
 
     // Show Sub Menu (Lights/LEDs)
     show_submenu('light-menu');
@@ -41,7 +41,7 @@ PUBNUB.each( ledlights, function(light) {
 // SHOW Open Door Menu
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.events.bind( 'click.door-update', function(event) {
-    console.log( 'Update Door State', event );
+    PUBNUB.log( 'Update Door State', event );
     play('click-sound');
     event.target.className = 'door-button-click';
     setTimeout( function() {
@@ -57,7 +57,7 @@ PUBNUB.events.bind( 'click.door-update', function(event) {
 // SHOW Open Door Menu
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.events.bind( 'click.door', function(event) {
-    console.log('Open/Close Door');
+    PUBNUB.log('Open/Close Door');
 
     // Show Sub Menu (Lights/LEDs)
     show_submenu('door-menu');
@@ -71,7 +71,7 @@ PUBNUB.events.bind( 'click.door', function(event) {
 // ADVANCED Menu
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.events.bind( 'click.conf', function(event) {
-    console.log('Clicked Debug');
+    PUBNUB.log('Clicked Debug');
 
     // Show Sub Menu (Lights/LEDs)
     show_submenu('debug-menu');
@@ -85,7 +85,7 @@ PUBNUB.events.bind( 'click.conf', function(event) {
 // LIGHT Selection and Management
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.events.bind( 'click.light-select', function(event) {
-    console.log( 'LIGHT SELECT', event );
+    PUBNUB.log( 'LIGHT SELECT', event );
 
     var lights = PUBNUB.$('light-selector').getElementsByTagName('div');
 
@@ -107,14 +107,14 @@ PUBNUB.events.bind( 'click.light-select', function(event) {
 // LIGHT Ragne Selectors
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.events.bind( 'click.light-slider', function(event) {
-    console.log(event);
+    PUBNUB.log(event);
 } );
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // Show/Hide Sub Menu
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function show_submenu(menu) {
-    console.log( 'Showing', menu );
+    PUBNUB.log( 'Showing', menu );
 
     PUBNUB.$(menu).className = "sub-menu-visible";
 }
@@ -133,7 +133,7 @@ function hide_all_submenus() {
 // Hide Main Menu
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function hide_menu(event) {
-    console.log(event);
+    PUBNUB.log(event);
 
 
     play('click-beep-sound');

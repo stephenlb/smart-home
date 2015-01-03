@@ -397,9 +397,13 @@ input[type=range].vertical-light {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 #debug-menu {
     position: absolute;
-    top: 0px;
+    top: 20px;
     left: 0px;
-    font-size: 240px;
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+    font-size: 10px;
+    font-family: Monaco, mono;
     color: #fff;
-    text-align: center;
+    text-align: left;
 }

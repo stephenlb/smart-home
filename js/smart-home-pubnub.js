@@ -15,7 +15,7 @@ var pubnub = PUBNUB(settings);
 // Publish Data
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.events.bind( 'send-iot-signal', function(data) {
-    console.log( 'PUBLISHING', data );
+    PUBNUB.log( 'PUBLISHING', data );
     pubnub.publish({ channel : settings.channel, message : data });
 } );
 
@@ -31,9 +31,21 @@ pubnub.subscribe({
 // Data Receiver
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function receiver(data) {
-    console.log( 'RECEIVING', data );
+    PUBNUB.log( 'RECEIVING', data );
     PUBNUB.events.fire( 'receive-iot-signal', data );
 }
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// LOGGER
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+PUBNUB.log = function() {
+    try {
+        var stiggy = JSON.stringify( arguments );
+        console.log(stiggy);
+        PUBNUB.$('log').innerHTML = '<div>' + stiggy + '</div>' +
+            PUBNUB.$('log').innerHTML
+    } catch (e) {}
+};
 
 
 
