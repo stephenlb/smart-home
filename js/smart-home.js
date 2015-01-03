@@ -26,16 +26,18 @@ PUBNUB.events.bind( 'hide-menu', function() { show_menu(1) } );
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // Octo Hitboxes
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-delegate( document.getElementsByTagName('body')[0], 'menu' );
+delegate( document.getElementsByTagName('body')[0], 'click' );
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // GET ELEMENT ACTION DATA ATTRIBUTE AND FIRE ASSOCIATED EVENT
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function delegate( element, namespace ) {
     PUBNUB.bind( 'mousedown,touchstart', element, function(e) {
-        var data   = bubblefind( e, 'data-data' )
+        var data   = bubblefind( e, 'data-value' )
         ,   action = bubblefind( e, 'data-action' );
-        if (!action) return true;
+
+        if (!action.target) return true;
+
         PUBNUB.events.fire( namespace + '.' + action.result, {
             action : action.result,
             target : action.target,
