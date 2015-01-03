@@ -32,10 +32,12 @@ delegate( docbody, 'click' );
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // Prevent Safari Scroll but also Allow GUI Actions
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+/*
 PUBNUB.bind( 'touchmove', document, function(e) {
     return bubblefind( e, 'data-action' ).result;
     return true;
 } );
+*/
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
