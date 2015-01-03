@@ -34,6 +34,7 @@ delegate( docbody, 'click' );
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.bind( 'touchmove', document, function(e) {
     return bubblefind( e, 'data-action' ).result;
+    return true;
 } );
 
 
