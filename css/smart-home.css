@@ -184,7 +184,11 @@ div#octo-group.octo-off-screen {
     -webkit-transition: all 1.0s;
     -webkit-transform: rotate(180deg);
 }
-.octo-off-screen .tempurature,
+.octo-off-screen .tempurature {
+    -webkit-transition: all 1.0s;
+    -webkit-transform: rotate(10deg) translate(0px,-100px);
+    opacity: 0;
+}
 .octo-off-screen .octo-labels {
     -webkit-transition: all 1.0s;
     -webkit-transform: rotate(4deg);
