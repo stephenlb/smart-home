@@ -68,6 +68,7 @@ function hide_menu(event) {
 // Play Sounds
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function play(sound) {
-    PUBNUB.$(sound).play();
+    try      { PUBNUB.$(sound).play() }
+    catch(e) { }
 }
 
