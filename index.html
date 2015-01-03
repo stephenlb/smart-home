@@ -24,7 +24,7 @@
             <div class="relative">
                 <div class="smart-home">
                     <img src="media/lego.png">
-                    SMART HOME v0.4
+                    SMART HOME v0.6
                 </div>
                 <div class="pubnub"></div>
             </div>
@@ -122,111 +122,111 @@
     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
     <!-- Octo GUI Buttons actually are Hexigons -->
     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-    <div class="container">
+    <div class="container"><div class="relative">
 
         <div id="labels-group" class="octo-off-screen"><div class="relative">
 
-                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-                    <!-- Labels -->
-                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-                    <div class="relative">
-                        <div class="octo-labels">
-                            <div class="octo-leds"></div>
-                            <div class="octo-leds-ang"></div>
-                            <div class="octo-leds-title">LIGHTS</div>
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <!-- Labels -->
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <div class="relative">
+                <div class="octo-labels">
+                    <div class="octo-leds"></div>
+                    <div class="octo-leds-ang"></div>
+                    <div class="octo-leds-title">LIGHTS</div>
 
-                            <div class="octo-door"></div>
-                            <div class="octo-door-title">DOOR</div>
+                    <div class="octo-door"></div>
+                    <div class="octo-door-title">DOOR</div>
 
-                            <div class="octo-conf"></div>
-                            <div class="octo-conf-ang"></div>
-                            <div class="octo-conf-title">DEBUG</div>
-                        </div>
-                    </div>
+                    <div class="octo-conf"></div>
+                    <div class="octo-conf-ang"></div>
+                    <div class="octo-conf-title">DEBUG</div>
+                </div>
+            </div>
 
         </div></div>
 
         <div id="numbers-group" class="octo-off-screen"><div class="relative">
 
-                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-                    <!-- Tempurature -->
-                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-                    <div class="relative">
-                        <div class="tempurature">
-                            <span id="tempurature">65</span><!--
-                            --><span class="tempurature-deg">&deg;</span>
-                        </div>
-                    </div>
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <!-- Tempurature -->
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <div class="relative">
+                <div class="tempurature">
+                    <span id="tempurature">65</span><!--
+                    --><span class="tempurature-deg">&deg;</span>
+                </div>
+            </div>
 
         </div></div>
 
         <div id="octo-group" class="octo-off-screen">
 
-                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-                    <!-- Octo Hexigon Buttons -->
-                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <!-- Octo Hexigon Buttons -->
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <div class="relative">
+                <div id="octo-leds" class="octo octo-leds octo-on">
+                    <i class="fa fa-lightbulb-o leds"></i>
                     <div class="relative">
-                        <div id="octo-leds" class="octo octo-leds octo-on">
-                            <i class="fa fa-lightbulb-o leds"></i>
-                            <div class="relative">
-                                <div class="octo-indicator leds"></div>
-                            </div>
-                        </div>
-                        <div
-                            id="octo-leds-indicator"   
-                            class="octo octo-leds octo-hidden"
-                        ></div>
-
-                        <div id="octo-door" class="octo octo-door octo-on">
-                            <i class="fa fa-unlock-alt door"></i>
-                            <div class="relative">
-                                <div class="octo-indicator door"></div>
-                            </div>
-                        </div>
-                        <div
-                            id="octo-door-indicator"   
-                            class="octo octo-door octo-hidden"
-                        ></div>
-
-                        <div id="octo-conf" class="octo octo-conf octo-on">
-                            <i class="fa fa-cogs conf"></i>
-                            <div class="relative">
-                                <div class="octo-indicator conf"></div>
-                            </div>
-                        </div>
-                        <div
-                            id="octo-conf-indicator"   
-                            class="octo octo-conf octo-hidden"
-                        ></div>
-                    </div>
-
-                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-                    <!-- Octo Hexigon Buttons HITBOX -->
-                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-                    <div class="relative">
-                            
-                        <div
-                            id="octo-leds-hitbox"
-                            data-value="leds"
-                            data-action="leds"
-                            class="octo-hitbox"
-                        ></div>
-                        <div
-                            id="octo-door-hitbox"
-                            data-value="door"
-                            data-action="door"
-                            class="octo-hitbox"
-                        ></div>
-                        <div
-                            id="octo-conf-hitbox"
-                            data-value="conf"
-                            data-action="conf"
-                            class="octo-hitbox"
-                        ></div>
+                        <div class="octo-indicator leds"></div>
                     </div>
                 </div>
+                <div
+                    id="octo-leds-indicator"   
+                    class="octo octo-leds octo-hidden"
+                ></div>
 
-    </div>
+                <div id="octo-door" class="octo octo-door octo-on">
+                    <i class="fa fa-unlock-alt door"></i>
+                    <div class="relative">
+                        <div class="octo-indicator door"></div>
+                    </div>
+                </div>
+                <div
+                    id="octo-door-indicator"   
+                    class="octo octo-door octo-hidden"
+                ></div>
+
+                <div id="octo-conf" class="octo octo-conf octo-on">
+                    <i class="fa fa-cogs conf"></i>
+                    <div class="relative">
+                        <div class="octo-indicator conf"></div>
+                    </div>
+                </div>
+                <div
+                    id="octo-conf-indicator"   
+                    class="octo octo-conf octo-hidden"
+                ></div>
+            </div>
+
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <!-- Octo Hexigon Buttons HITBOX -->
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <div class="relative">
+                    
+                <div
+                    id="octo-leds-hitbox"
+                    data-value="leds"
+                    data-action="leds"
+                    class="octo-hitbox"
+                ></div>
+                <div
+                    id="octo-door-hitbox"
+                    data-value="door"
+                    data-action="door"
+                    class="octo-hitbox"
+                ></div>
+                <div
+                    id="octo-conf-hitbox"
+                    data-value="conf"
+                    data-action="conf"
+                    class="octo-hitbox"
+                ></div>
+            </div>
+        </div>
+
+    </div></div>
 
     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
     <!-- The things -->

@@ -143,6 +143,25 @@ body, div, i, span, li {
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Main Menu GUI */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+#octo-group {
+    position: absolute;
+    top: 2px;
+    left: 150px;
+}
+#numbers-group {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+#labels-group {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 /* Octo Animation */
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 #octo-group,
@@ -155,7 +174,7 @@ body, div, i, span, li {
 }
 div#octo-group.octo-off-screen {
     -webkit-transform: rotate(-180deg);
-    -webkit-transform-origin: 400px 110px;
+    -webkit-transform-origin: 280px 110px;
     opacity: 0.9;
 }
 .octo-off-screen .octo {
