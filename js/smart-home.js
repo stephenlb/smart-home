@@ -15,7 +15,7 @@ function main() {
 // Show/Hide Main Menu "Octo Buttons" actually Hexigons...
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function show_menu(visible) {
-    var setit = visible ? "octo-off-screen" : " ";
+    var setit = visible ? "octo-off-screen" : "octo-on-screen";
     PUBNUB.$("octo-group").className    = setit;
     PUBNUB.$("numbers-group").className = setit;
     PUBNUB.$("labels-group").className  = setit;

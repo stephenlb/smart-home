@@ -175,15 +175,18 @@ body, div, i, span, li {
     -webkit-transition: all 1.0s;
 }
 div#octo-group.octo-off-screen {
+    -webkit-transition: all 1.0s;
     -webkit-transform: rotate(-180deg);
     -webkit-transform-origin: 280px 110px;
     opacity: 0.2;
 }
 .octo-off-screen .octo {
-    /*-webkit-transform: rotate(180deg);*/
+    -webkit-transition: all 1.0s;
+    -webkit-transform: rotate(180deg);
 }
 .octo-off-screen .tempurature,
 .octo-off-screen .octo-labels {
+    -webkit-transition: all 1.0s;
     -webkit-transform: rotate(4deg);
     opacity: 0;
 }
