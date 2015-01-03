@@ -53,7 +53,8 @@ function delegate( element, namespace ) {
             data   : data.result
         } );
 
-        return true;
+        // Allow Inputs to Work
+        if (action.target.nodeName == "INPUT") return true;
     } );
 }
 
