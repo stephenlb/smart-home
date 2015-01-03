@@ -89,7 +89,7 @@ function hide_menu(event) {
         setTimeout( function(){ PUBNUB.events.fire('hide-menu') }, 300 );
     }
 
-    animate( PUBNUB.$("octo-"+event.data+"-indicator"), [
+    0&&animate( PUBNUB.$("octo-"+event.data+"-indicator"), [
         { 'd' : 0.2, 'r' : 10, 'opacity' : '0.5' },
         { 'd' : 0.2 }
     ] );

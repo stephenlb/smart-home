@@ -28,7 +28,7 @@ PUBNUB.events.bind( 'hide-menu', function() { show_menu(1) } );
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 var docbody = document.getElementsByTagName('body')[0];
 delegate( docbody, 'click' );
-PUBNUB.bind( 'ontouchmove', document, function(e) { return false } );
+PUBNUB.bind( 'touchmove', document, function(e) { return false } );
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // GET ELEMENT ACTION DATA ATTRIBUTE AND FIRE ASSOCIATED EVENT
