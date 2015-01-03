@@ -24,9 +24,11 @@ PUBNUB.events.bind( 'show-menu', function() { show_menu(0) } );
 PUBNUB.events.bind( 'hide-menu', function() { show_menu(1) } );
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Octo Hitboxes
+// GUI Hitboxes
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-delegate( document.getElementsByTagName('body')[0], 'click' );
+var docbody = document.getElementsByTagName('body')[0];
+delegate( docbody, 'click' );
+PUBNUB.bind( 'ontouchmove', docbody, function(e) { return false } );
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // GET ELEMENT ACTION DATA ATTRIBUTE AND FIRE ASSOCIATED EVENT
