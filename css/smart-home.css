@@ -149,6 +149,9 @@ body, div, i, span, li {
     position: absolute;
     top: 2px;
     left: 150px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
 }
 #numbers-group {
     position: absolute;
