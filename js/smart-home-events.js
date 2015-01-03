@@ -124,7 +124,7 @@ function hide_submenu(menu) {
 function hide_all_submenus() {
     PUBNUB.each( [
         'light-menu',
-        'debug-menu',
+        //'debug-menu',
         'door-menu'
     ], hide_submenu );
 }

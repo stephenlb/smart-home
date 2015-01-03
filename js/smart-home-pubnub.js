@@ -40,10 +40,13 @@ function receiver(data) {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.log = function() {
     try {
-        var stiggy = JSON.stringify( arguments );
+        var stiggy = (''+(new Date)).split(' ')[4] + ' ' +
+            JSON.stringify( arguments );
+
         console.log(stiggy);
+
         PUBNUB.$('log').innerHTML = '<div>' + stiggy + '</div>' +
-            PUBNUB.$('log').innerHTML
+            PUBNUB.$('log').innerHTML.substr( 0, 4600 );
     } catch (e) {}
 };
 
