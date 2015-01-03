@@ -33,6 +33,7 @@ delegate( docbody, 'click' );
 // Prevent Safari Scroll but also Allow GUI Actions
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.bind( 'touchmove', document, function(e) {
+    return true;
     return bubblefind( e, 'data-action' ).result;
 } );
 
@@ -52,9 +53,9 @@ function delegate( element, namespace ) {
             target : action.target,
             data   : data.result
         } );
-    } );
 
-    return true;
+        return true;
+    } );
 }
 
 function bubblefind( e, attr ) {
