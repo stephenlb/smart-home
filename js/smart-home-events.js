@@ -94,7 +94,7 @@ function hide_menu(event) {
         { 'd' : 0.2 }
     ] );
 
-    animate( PUBNUB.$("octo-"+event.data), [
+    0&&animate( PUBNUB.$("octo-"+event.data), [
         { 'd' : 0.2, 'r' : -10 },
         { 'd' : 0.8 }
     ] );
