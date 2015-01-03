@@ -81,8 +81,7 @@ function hide_menu(event) {
     if (hide_menu.invisible) {
         hide_menu.invisible = false;
         setTimeout( function(){ PUBNUB.events.fire('show-menu') }, 300 );
-        hide_all_submenus();
-        return;
+        return hide_all_submenus();
     }
     else {
         hide_menu.invisible = true;
@@ -106,6 +105,7 @@ function hide_menu(event) {
 // Play Sounds
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function play(sound) {
+    return;
     try      { PUBNUB.$(sound).play() }
     catch(e) { }
 }

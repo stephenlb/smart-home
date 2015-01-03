@@ -28,7 +28,14 @@ PUBNUB.events.bind( 'hide-menu', function() { show_menu(1) } );
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 var docbody = document.getElementsByTagName('body')[0];
 delegate( docbody, 'click' );
-PUBNUB.bind( 'touchmove', document, function(e) { return false } );
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Prevent Safari Scroll but also Allow GUI Actions
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+PUBNUB.bind( 'touchmove', document, function(e) {
+    return bubblefind( e, 'data-action' ).result;
+} );
+
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // GET ELEMENT ACTION DATA ATTRIBUTE AND FIRE ASSOCIATED EVENT
