@@ -177,10 +177,10 @@ body, div, i, span, li {
 div#octo-group.octo-off-screen {
     -webkit-transform: rotate(-180deg);
     -webkit-transform-origin: 280px 110px;
-    opacity: 0.9;
+    opacity: 0.2;
 }
 .octo-off-screen .octo {
-    -webkit-transform: rotate(180deg);
+    /*-webkit-transform: rotate(180deg);*/
 }
 .octo-off-screen .tempurature,
 .octo-off-screen .octo-labels {
