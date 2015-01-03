@@ -30,7 +30,7 @@ var transmit_led = PUBNUB.updater( function() {
         waitFloor      : +PUBNUB.$('min-wait').value,
         waitCeiling    : +PUBNUB.$('max-wait').value
     } );
-}, 500 );
+}, 200 );
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // LED SLIDER Settings
@@ -49,6 +49,9 @@ PUBNUB.each( ledlights, function(light) {
 PUBNUB.events.bind( 'click.door', function(event) {
     console.log('Open/Close Door');
 
+    // Show Sub Menu (Lights/LEDs)
+    show_submenu('door-menu');
+
     // Hide Main Menu
     hide_menu(event);
 
@@ -59,6 +62,9 @@ PUBNUB.events.bind( 'click.door', function(event) {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 PUBNUB.events.bind( 'click.conf', function(event) {
     console.log('Clicked Debug');
+
+    // Show Sub Menu (Lights/LEDs)
+    show_submenu('debug-menu');
 
     // Hide Main Menu
     hide_menu(event);

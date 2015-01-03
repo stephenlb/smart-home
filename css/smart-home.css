@@ -352,3 +352,27 @@ input[type=range].vertical-light {
         0px 0px 20px rgba(0,0,0,0.3),
         inset 0px -14px 0px -10px #74dba3;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* DOOR GUI */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+#door-menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 300px;
+    color: #fff;
+    text-align: center;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* DEBUG GUI */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+#debug-menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 300px;
+    color: #fff;
+    text-align: center;
+}
