@@ -24,7 +24,7 @@
             <div class="relative">
                 <div class="smart-home">
                     <img src="media/lego.png">
-                    SMART HOME <strong>v0.29</strong>
+                    SMART HOME <strong>v0.32</strong>
                 </div>
                 <div class="pubnub"></div>
             </div>
@@ -52,11 +52,24 @@
     <div class="relative">
         <div id="door-menu" class="sub-menu">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-10">
-                        <i class="fa fa-frown-o"></i>
-                    </div>
+
+                <div
+                    id="door-open"
+                    data-action="door-update"
+                    data-value="openDoor"
+                ><!-- -->
+                    <i class="fa fa-unlock-alt"></i>
+                    OPEN
+                </div><!--
+                --><div
+                    id="door-close"
+                    data-action="door-update"
+                    data-value="closeDoor"
+                ><!-- -->
+                    <i class="fa fa-lock"></i>
+                    CLOSE
                 </div>
+
             </div>
         </div>
     </div>

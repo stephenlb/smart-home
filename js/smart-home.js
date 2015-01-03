@@ -50,7 +50,8 @@ function delegate( element, namespace ) {
         PUBNUB.events.fire( namespace + '.' + action.result, {
             action : action.result,
             target : action.target,
-            data   : data.result
+            data   : data.result,
+            value  : data.result
         } );
 
         // Allow Inputs to Work

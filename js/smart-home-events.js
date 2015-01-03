@@ -1,18 +1,12 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // SHOW LEDs Menu
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-var led_transmitter = null
-,   led_id          = 0;
-
+var led_id = 0;
 PUBNUB.events.bind( 'click.leds', function(event) {
     console.log('LEDs');
 
     // Show Sub Menu (Lights/LEDs)
     show_submenu('light-menu');
-
-    // Start Signal Emitter
-    //clearInterval(led_transmitter);
-    //led_transmitter = setInterval( transmit_led, 500 );
 
     // Hide Main Menu
     hide_menu(event);
@@ -41,6 +35,22 @@ PUBNUB.each( ledlights, function(light) {
         transmit_led();
         return true;
     } );
+} );
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// SHOW Open Door Menu
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+PUBNUB.events.bind( 'click.door-update', function(event) {
+    console.log( 'Update Door State', event );
+    play('click-sound');
+    event.target.className = 'door-button-click';
+    setTimeout( function() {
+        event.target.className = 'door-close-click';
+    }, 300 );
+
+    var signal = {};
+    signal[event.value] = true;
+    PUBNUB.events.fire( 'send-iot-signal', signal );
 } );
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -131,7 +141,6 @@ function hide_menu(event) {
     if (hide_menu.invisible) {
         hide_menu.invisible = false;
         setTimeout( function(){ PUBNUB.events.fire('show-menu') }, 1 );
-        //clearInterval(led_transmitter);
         return hide_all_submenus();
     }
     else {
