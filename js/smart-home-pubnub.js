@@ -50,6 +50,4 @@ PUBNUB.log = function() {
     } catch (e) {}
 };
 
-
-
 })();
