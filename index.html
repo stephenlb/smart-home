@@ -103,19 +103,19 @@
 
                         <!-- BUTTONS (NOT SLIDERS) -->
                         <div data-action="light-select" data-value="0"
-                            class="light-select light-selected">0</div>
+                            class="light-select light-selected">IceCave Lamp</div>
                         <div data-action="light-select" data-value="1"
-                            class="light-select light-unselected">1</div>
+                            class="light-select light-unselected">IceCave Crystal</div>
                         <div data-action="light-select" data-value="2"
-                            class="light-select light-unselected">2</div>
+                            class="light-select light-unselected">Fireplace Orange</div>
                         <div data-action="light-select" data-value="3"
-                            class="light-select light-unselected">3</div>
+                            class="light-select light-unselected">Campfire</div>
                         <div data-action="light-select" data-value="4"
-                            class="light-select light-unselected">4</div>
+                            class="light-select light-unselected">Porch Light</div>
                         <div data-action="light-select" data-value="5"
-                            class="light-select light-unselected">5</div>
+                            class="light-select light-unselected">Fireplace Red</div>
                         <div data-action="light-select" data-value="6"
-                            class="light-select light-unselected">6</div>
+                            class="light-select light-unselected">Stove</div>
                         <!-- BUTTONS (NOT SLIDERS) -->
 
                     </div><div class="col-xs-1">
@@ -126,7 +126,7 @@
                             data-value="minPulseLength"
                             id="min-pulse" type="range" class="vertical-light"
                             min="10" max="4090" step="10" value="2500">
-                        <div class="light-slider-label">GEREMY</div>
+                        <div class="light-slider-label">Min Bright</div>
 
                     </div><div class="col-xs-1">
 
@@ -136,27 +136,28 @@
                             data-value="maxPulseLength"
                             id="max-pulse" type="range" class="vertical-light"
                             min="10" max="4090" step="10" value="3000">
-                        <div class="light-slider-label">HAS</div>
+                        <div class="light-slider-label">Max Bright</div>
 
                     </div><div class="col-xs-1">
 
                         <!-- MIN WAIT -->
-                        <input
-                            data-action="light-slider"
-                            data-value="waitCeiling"
-                            id="min-wait" type="range" class="vertical-light"
-                            min="0.0" max="2.0" step="0.0001" value="0.0001">
-                        <div class="light-slider-label">B</div>
-
-                    </div><div class="col-xs-1">
-
-                        <!-- MAX WAIT -->
-                        <input
+                    <input
                             data-action="light-slider"
                             data-value="waitFloor"
                             id="max-wait" type="range" class="vertical-light"
                             min="0.0" max="2.0" step="0.0001" value="0.05">
-                        <div class="light-slider-label">T's</div>
+                    <div class="light-slider-label">Min Flicker</div>
+
+                </div><div class="col-xs-1">
+
+                        <!-- MAX WAIT -->
+                    <input
+                            data-action="light-slider"
+                            data-value="waitCeiling"
+                            id="min-wait" type="range" class="vertical-light"
+                            min="0.0" max="2.0" step="0.0001" value="0.0001">
+                    <div class="light-slider-label">Max Flicker</div>
+
 
                     </div>
                     <div class="col-xs-1"></div>

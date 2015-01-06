@@ -336,8 +336,8 @@ input[type=range].vertical-light {
     padding: 0px;
     text-align: center;
     margin: 0px 0px 10px 0px;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 12px;
+    line-height: 40px;
 }
 .light-selected {
     color: #64cb93;
