@@ -93,7 +93,7 @@ PUBNUB.events.bind( 'click.light-select', function(event) {
 
     // Set the targeted LED
     led_id = +event.data;
-    transmit_led();
+    //transmit_led();
 
     PUBNUB.each( lights, function(light) {
         if (PUBNUB.attr( light, 'data-value' ) == event.data)
