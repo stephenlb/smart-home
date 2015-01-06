@@ -31,7 +31,7 @@ var transmit_led = PUBNUB.updater( function() {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 var ledlights = PUBNUB.$('light-menu').getElementsByTagName('input');
 PUBNUB.each( ledlights, function(light) {
-    PUBNUB.bind( 'touchmove,mousemove', light, function(e) {
+    PUBNUB.bind( 'touchend,mouseup', light, function(e) {
         transmit_led();
         return true;
     } );
