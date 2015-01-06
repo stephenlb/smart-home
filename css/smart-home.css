@@ -361,12 +361,17 @@ input[type=range].vertical-light {
     position: absolute;
     top: 120px;
     left: 80px;
+    width: 400px;
+    text-align: center;
 }
+#door-nudge-open,
+#door-nudge-close,
 #door-open,
 #door-close {
     cursor: pointer;
     display: inline-block;
     padding: 0 30px;
+    width: 150px;
     margin: 0px;
     text-align: center;
     font-size: 20px;
@@ -374,17 +379,29 @@ input[type=range].vertical-light {
     border: 0;
     outline: 0;
 }
+div.door-nudge-buttons {
+    margin: 20px 0;
+}
+div.door-nudge-buttons #door-nudge-open,
+div.door-nudge-buttons #door-nudge-close {
+    font-size: 10px;
+    width: 100px;
+    line-height: 30px;
+    padding: 0 20px;
+}
 .door-button-click {
     box-shadow:
         0px 0px 20px 1px rgba(0,0,0,0.9),
         inset 0px -14px 0px -10px #04dba3;
 }
+#door-nudge-open,
 #door-open {
     -webkit-border-top-left-radius: 500px;
     -webkit-border-bottom-left-radius: 500px;
     background-color: #fff;
     color: #f45245;
 }
+#door-nudge-close,
 #door-close {
     -webkit-border-top-right-radius: 500px;
     -webkit-border-bottom-right-radius: 500px;
