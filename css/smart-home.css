@@ -328,7 +328,7 @@ input[type=range].vertical-light {
     display: inline-block;
     -webkit-appearance: slider-vertical;
     width: 24px;
-    height: 270px;
+    height: 310px;
 }
 .light-select {
     cursor: pointer;
