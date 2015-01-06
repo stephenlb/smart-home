@@ -33,6 +33,10 @@ pubnub.subscribe({
 function receiver(data) {
     PUBNUB.log( 'RECEIVING', data );
     PUBNUB.events.fire( 'receive-iot-signal', data );
+
+    if (data.temp1) {
+        document.getElementById('tempurature').innerHTML = data.temp1FInt * 9/5 + 32 + "&deg;";
+    }
 }
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

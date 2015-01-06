@@ -73,6 +73,8 @@ PUBNUB.events.bind( 'click.door', function(event) {
 PUBNUB.events.bind( 'click.conf', function(event) {
     PUBNUB.log('Clicked Debug');
 
+    PUBNUB.events.fire( 'send-iot-signal', {getEnviro:true} );
+
     // Show Sub Menu (Lights/LEDs)
     show_submenu('debug-menu');
 
